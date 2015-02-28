@@ -9,7 +9,7 @@
             <param name="ConversionPattern"
                 value="[%d{ISO8601}] %-5p [%c] %m %n" />
             -->
-            <param name="ConversionPattern" value="%-5p [%c] %m %n" />
+            <param name="ConversionPattern" value="%d{dd.MM.YYYY-HH:mm:ss,SSS} %-5p [%c] %m %n" />
         </layout>
 </appender>
     
@@ -18,7 +18,7 @@
    <param name="threshold" value="debug"/>
    <param name="append" value="true"/>
    <layout class="org.apache.log4j.PatternLayout">
-      <param name="ConversionPattern" value="%-5p [%c] %m %n"/>
+      <param name="ConversionPattern" value="%d{dd.MM.YYYY-HH:mm:ss,SSS} %-5p [%c] %m %n"/>
    </layout>
 </appender>
 
