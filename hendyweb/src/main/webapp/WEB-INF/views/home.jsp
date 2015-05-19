@@ -12,7 +12,7 @@
 
 <html>
 <head>
-	<title>Home</title>
+	<title>HendyWeb Home</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/hendy.css" />
 </head>
 <body>
