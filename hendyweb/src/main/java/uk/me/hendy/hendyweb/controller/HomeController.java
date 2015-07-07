@@ -6,14 +6,14 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.client.RestTemplate;
 
-import uk.me.hendy.service.menu.MenuDTO;
-import uk.me.hendy.service.menu.MenuService;
+import uk.me.hendy.hendyweb.serviceclient.MenuDTO;
+
 
 /**
  * Handles requests for the application home page.
@@ -23,8 +23,10 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	@Autowired
-	private MenuService menuService;
+	@Value("${drg.hendyweb.service.server}")
+	private String serviceServer;
+	@Value("${drg.hendyweb.service.webapp}")
+	private String serviceWebapp;
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
@@ -41,27 +43,50 @@ public class HomeController {
 		
 		String javaVersion = System.getProperty("java.version");
 		String userName = System.getProperty("user.name");
-		String menuHtml = this.getMenu();
+		//String menuHtml = this.getMenuJson();
+		String menuJson = this.getMenuJson("davetest");
 		
 		model.addAttribute("serverTime", formattedDate );
 		model.addAttribute("javaVersion", javaVersion);
 		model.addAttribute("userName", userName);
-		model.addAttribute("hendymenu", menuHtml);
+		//model.addAttribute("hendymenu", menuHtml);
+		model.addAttribute("menuJson", menuJson);
+		model.addAttribute("menuObject",getMenuObject("davetest"));
 		
 		logger.debug("model attributes out=" + model);
 		
 		return "home";
 	}
 	
+	/*
 	private String getMenu() {
+		logger.debug("getMenu");
 		String menuHtml = "";
 		
 		MenuDTO menu = menuService.getMenu("davetest");
-		System.out.println("------AGAIN------");
+		logger.debug("------AGAIN------");
 		menu = menuService.getMenu("davetest");
 		menuHtml = menu.getHtml();
 		
 		return menuHtml;
+	}*/
+	
+	private String getMenuJson(String menuName) {
+		String serviceURL = this.serviceServer + "/" + this.serviceWebapp + "/menu/" + menuName + ".json";
+		logger.debug("serviceURL="+serviceURL);
+		RestTemplate restTemplate = new RestTemplate();
+		String result = restTemplate.getForObject(serviceURL, String.class);
+		logger.debug("menuJson="+result);
+		return result;
+	}
+	
+	private MenuDTO getMenuObject(String menuName) {
+		String serviceURL = this.serviceServer + "/" + this.serviceWebapp + "/menu/" + menuName + ".xml";
+		logger.debug("serviceURL="+serviceURL);
+		RestTemplate restTemplate = new RestTemplate();
+		MenuDTO result = restTemplate.getForObject(serviceURL, MenuDTO.class);
+		logger.debug("menuObject="+result);
+		return result;
 	}
 	
 }

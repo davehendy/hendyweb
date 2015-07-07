@@ -12,10 +12,29 @@
 
 <html>
 <head>
-	<title>HendyWeb Home</title>
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/hendy.css" />
+	<title>HendyWeb Home </title>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/hendy.css" />
+	<script type="text/javascript" src="js/hendywebGlobal.js"></script>
+	<script>//nothing here</script>
+	<script>
+	//<![CDATA[
+	    //$(document).ready(function(){
+	    	var a="ddd";
+			hendywebGlobal.setMenu('fred');
+        //});
+		
+	//]]>
+	</script>
+	
+	
 </head>
 <body>
+<!-- 
+	<div id="pageData">
+	
+	<![CDATA[${menuJson}]]>
+	</div>
+	 -->
 	<div id="container">
 	
 		<jsp:directive.include file="hendytop.jsp" />

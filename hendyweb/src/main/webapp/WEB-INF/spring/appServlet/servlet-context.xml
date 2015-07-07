@@ -21,14 +21,15 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	 
+	 <!-- 
 	<beans:bean id="MenuService" name="MenuService"
 		class="uk.me.hendy.service.menu.MenuServiceHendyRepository">
 	</beans:bean>
-	 
+	  -->
 	 
 	
-	<context:component-scan base-package="uk.me.hendy" />
+	<context:component-scan base-package="uk.me.hendy.hendyweb" />
+	<context:property-placeholder location="classpath:hendyweb-${user.name}.properties" />
 	
 	
 	
