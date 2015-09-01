@@ -17,7 +17,10 @@ public class HendywebServletContextListener implements ServletContextListener {
 
 	@Override
 	public void contextInitialized(ServletContextEvent arg0) {
+		//System.setProperty("drg., value)
+		
 		logger.info("context being initialised");
+		
 
 	}
 
