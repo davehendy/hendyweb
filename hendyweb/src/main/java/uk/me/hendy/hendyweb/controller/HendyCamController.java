@@ -37,7 +37,7 @@ public class HendyCamController {
 	public String home(Locale locale, Model model) {
 		logger.debug("enters hendycam");
 		
-		MenuDTO menuObject = menuServiceClient.getMenu("davetest");
+		MenuDTO menuObject = menuServiceClient.getMenu("hendyweb");
 		model.addAttribute("menuObject",menuObject);
 				
 		model.addAttribute("hendyCamJson", this.getHendyCamJson());

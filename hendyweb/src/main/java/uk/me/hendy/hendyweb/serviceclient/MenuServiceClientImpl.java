@@ -15,12 +15,15 @@ public class MenuServiceClientImpl extends AbstractServiceClient implements Menu
 	public MenuDTO getMenu(String menuName) {
 		logger.debug("getMenu("+menuName+")");
 		
-		MenuDTO menuObject = ObjectCache.INSTANCE.getMenu(ObjectCache.INSTANCE.MAIN_MENU_KEY);
+		//MenuDTO menuObject = ObjectCache.INSTANCE.getMenu(ObjectCache.INSTANCE.MAIN_MENU_KEY);
+		MenuDTO menuObject = ObjectCache.INSTANCE.getMenu(menuName);
 		if (menuObject == null) {
-			String serviceURL = serviceServer + "/" + serviceWebapp + "/menu/" + menuName + ".xml";
+			String serviceURL = serviceServer + serviceWebapp + "/menu/" + menuName + ".xml";
+			logger.debug("service URL="+serviceURL);
 			RestTemplate restTemplate = new RestTemplate();
 			menuObject = restTemplate.getForObject(serviceURL, MenuDTO.class);
-			ObjectCache.INSTANCE.setMenu(ObjectCache.INSTANCE.MAIN_MENU_KEY, menuObject);
+			//ObjectCache.INSTANCE.setMenu(ObjectCache.INSTANCE.MAIN_MENU_KEY, menuObject);
+			ObjectCache.INSTANCE.setMenu(menuName, menuObject);
 		}
 		
 		logger.debug("menuObject="+menuObject);

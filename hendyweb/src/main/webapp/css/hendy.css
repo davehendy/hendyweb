@@ -33,7 +33,10 @@ nav ul li a {
     height:30px;
     padding-top:10px;
     text-align:center;}
-#leftblock {font-size:8px; }
+#leftblock {
+	font-size:8px; 
+	width:15%;
+}
 #content		{ padding-left: 18px; }
 #extra			{ border-bottom: 1px solid #ccc; }
 #extra small	{ font-size: 11px; line-height: 18px; }
@@ -51,6 +54,22 @@ footer	p		{ color: #ccc; margin: 0; padding: 0 18px 10px; }
 footer ul		{ border-bottom: 1px solid #999; list-style: none; margin: 0 18px 6px; padding: 10px 0 6px; }
 footer li		{ display: inline; font-size: 11px; font-weight: bold; padding-right: 5px; }
 
+/* HendyCam */
+#hendycamContent {
+	margin-left:20%;
+}
+#hendycamImagesDiv {
+	width:100%;
+}
+#hendycamImagesDiv img {
+	float:left;
+	margin-right:25px;
+	margin-bottom:25px;
+	width:320px];
+	height:240px;
+	border:2px;
+	cursor:crosshair;
+}
 /* Other controls */
 #pageData {
 	visibility: hidden;
