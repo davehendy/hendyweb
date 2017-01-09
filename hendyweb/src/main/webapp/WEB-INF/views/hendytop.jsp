@@ -11,7 +11,7 @@
 		omit-xml-declaration="true" />
 
 <!-- The default Hendy page top -->
-
+	<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/favicon.ico" />
 	<header>
 		<h1>Hendy</h1>
 		<p class="description">The website of Dave and Sandra Hendy</p>

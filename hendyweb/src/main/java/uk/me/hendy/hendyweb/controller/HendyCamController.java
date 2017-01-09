@@ -13,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 import uk.me.hendy.hendyweb.serviceclient.MenuDTO;
 import uk.me.hendy.hendyweb.serviceclient.MenuServiceClient;
+import uk.me.hendy.hendyweb.utility.ObjectCache;
 
 
 /**
@@ -37,7 +38,7 @@ public class HendyCamController {
 	public String home(Locale locale, Model model) {
 		logger.debug("enters hendycam");
 		
-		MenuDTO menuObject = menuServiceClient.getMenu("hendyweb");
+		MenuDTO menuObject = menuServiceClient.getMenu(ObjectCache.INSTANCE.MAIN_MENU_KEY);
 		model.addAttribute("menuObject",menuObject);
 				
 		model.addAttribute("hendyCamJson", this.getHendyCamJson());

@@ -38,7 +38,9 @@
 		
 		<div id="wrapper">
 			<section id="leftblock">
-				<h2>Click on on image to open a closer look.</h2>
+				<br /> <br />
+				<h2>Every hour during the day HendyCam takes a snap of the Hendy garden.</h2>
+				<h2>Click on an image to open a closer look.</h2>
 			</section>
 			 
 			<section id="hendycamContent">

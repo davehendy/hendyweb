@@ -1,6 +1,5 @@
 package uk.me.hendy.hendyweb.serviceclient;
 
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * A menu item for a Hendy Menu.
@@ -42,7 +41,7 @@ public class MenuItemDTO {
 	 * Gets the MenuItem as a String of HTML.
 	 * @return a String.
 	 */
-	public String getHtml() {
+	/*public String getHtml() {
 		StringBuilder menuItemHtml = new StringBuilder();
 		
 		menuItemHtml.append("<li>");
@@ -52,7 +51,7 @@ public class MenuItemDTO {
 		menuItemHtml.append("</li>");
 		
 		return menuItemHtml.toString();
-	}
+	}*/
 	
 	@Override
 	public String toString() {

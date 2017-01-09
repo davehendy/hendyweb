@@ -18,10 +18,11 @@
 				<li><a href="">Navigation 2</a></li>
 				<li><a href="">Navigation 3</a></li>
 				<li><a href="">Navigation 4</a></li>
-				<li><a href="">Navigation 5</a></li>
-				<li><a href="">Navigation 6</a></li>
+				
 			</ul>
-			<p>Footer stuff goes here. Copyright, disclaimers &#8211; stuff like that.</p>
+			<p>Built using Java, JEE, Spring MVC, JPA, Hibernate, MySQL.</p>
+			<p>Copyright &#169; 2016 David Hendy. </p>
+			
 		</footer>
 	
 

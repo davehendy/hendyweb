@@ -15,7 +15,7 @@ public enum ObjectCache {
 	
 	HashMap<String,String> stringMap = new HashMap<String,String>();	
 	HashMap<String,MenuDTO> menuMap = new HashMap<String,MenuDTO>();
-	public String MAIN_MENU_KEY = "mm_key";
+	public String MAIN_MENU_KEY = "hendyweb";
 	
 	public String getString(String key) {
 		logger.debug("getString("+key+")");

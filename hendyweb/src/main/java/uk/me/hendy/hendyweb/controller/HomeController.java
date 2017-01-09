@@ -50,7 +50,7 @@ public class HomeController {
 		String javaVersion = System.getProperty("java.version");
 		String userName = System.getProperty("user.name");
 		//String menuHtml = this.getMenuJson();
-		MenuDTO menuObject = getMenuObject("hendyweb");
+		MenuDTO menuObject = getMenuObject(ObjectCache.INSTANCE.MAIN_MENU_KEY);
 						
 		model.addAttribute("serverTime", formattedDate );
 		model.addAttribute("javaVersion", javaVersion);

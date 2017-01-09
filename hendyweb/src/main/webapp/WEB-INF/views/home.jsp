@@ -14,49 +14,38 @@
 <head>
 	<title>HendyWeb Home </title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/hendy.css" />
+	
 	<script type="text/javascript" src="js/hendywebGlobal.js"></script>
 	<script>//nothing here</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script>
-	//<![CDATA[
-	    //$(document).ready(function(){
-	    	var a="ddd";
-			hendywebGlobal.setMenu('fred');
-        //});
-		
-	//]]>
-	</script>
-	
-	
+	<script>//nothing here</script>
 </head>
 <body>
-<!-- 
-	<div id="pageData">
-	
-	<![CDATA[${menuJson}]]>
-	</div>
-	 -->
 	<div id="container">
 	
 		<jsp:directive.include file="hendytop.jsp" />
 		
 		<div id="wrapper">
 			<section id="leftblock">
-				<h2>Left Margin</h2>
+				<h2>Hendycam</h2>
+				<a href="hendycam">
+					<img src="/hendycam/image00001.jpg"></img>
+				</a>
+				<h3>Click on image</h3>
+				
 			</section>
 			 
 			<section id="content">
-				<h2>Content Goes Here</h2>
-				<p>Cue the obligatory <em>Lorem Ipsum</em> riff-raff type text, <a href="">Followed by an example of a link.</a> There are many uses for <em>Lorem Ipsum</em>, using it as filled text isn't recommended. Make sure to always use actual content when building your websites! It just makes more sense. Now for the lipsum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h2>Hendy Home Page</h2>
+				<p>The 2016 version of the Hendy website is here.</p>
+				<p>It is still under construction and once I think of something to put here I will do so. </p>
+				<p>Most importantly HendyCam is available.</p>
 			</section>
 		</div>
 		
 		<section id="extra">
-			<h2>Extra Stuff Goes Here</h2>
-			<p>Sometimes this would be called a <em>sidebar</em>, but it doesn't always have to be on the side to be called a <em>sidebar</em>. Sidebars can be on tops of things, below things, but they are usually beside things &#8211; hence it being a called a sidebar.</p>
-			<p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small></p>
+			<h2>Other bits and bobs</h2>
+			<p>The plan is to fill this area with other useful information.</p>
 		</section>
 		
 		<jsp:directive.include file="hendybottom.jsp" />
